@@ -104,35 +104,35 @@ let producto15={
     foto:"https://firebasestorage.googleapis.com/v0/b/la-tiendita-5e7f9.appspot.com/o/tennis%207.webp?alt=media&token=30c6c541-cea7-46be-841d-b807d7f9872b"
 }
 
-let producto15={
+let producto16={
     nombre:"falda con abertura para mujer",
     precio:500000,
     estado:true,
     foto:"https://firebasestorage.googleapis.com/v0/b/la-tiendita-5e7f9.appspot.com/o/pantaloneta%202.webp?alt=media&token=b066af42-fc5c-4a1a-b7b6-010996373744"
 }
 
-let producto15={
+let producto17={
     nombre:"camiseta corta para mujer essentials logo",
     precio:500000,
     estado:true,
     foto:"https://firebasestorage.googleapis.com/v0/b/la-tiendita-5e7f9.appspot.com/o/camibuso.webp?alt=media&token=6ee72152-66a2-41fd-96bb-e66f40316997"
 }
 
-let producto15={
+let producto18={
     nombre:"zapatillas para mujer cali dream pastel",
     precio:500000,
     estado:true,
     foto:"https://firebasestorage.googleapis.com/v0/b/la-tiendita-5e7f9.appspot.com/o/tennis%208.webp?alt=media&token=82427a95-0351-47e3-9229-c2c753a126e0"
 }
 
-let producto15={
+let producto19={
     nombre:"zapatillas para mujer cali dream pastel",
     precio:500000,
     estado:true,
     foto:"https://firebasestorage.googleapis.com/v0/b/la-tiendita-5e7f9.appspot.com/o/tennis%209.webp?alt=media&token=108c10da-ef35-4c63-a194-9d21fd3f008d"
 }
 
-let producto15={
+let producto20={
     nombre:"zapatillas para mujer cali dream pastel",
     precio:500000,
     estado:true,
@@ -155,11 +155,35 @@ let productos=Array(
     producto12,
     producto13,
     producto14,
-    producto15
+    producto15,
+    producto16,
+    producto17,
+    producto18,
+    producto19,
+    producto20
 )
+
+let contenedor = document.getElementById("contenedor")
 
 //RECORRO EL ARREGLO
 productos.forEach(function(producto){
-    console.log(producto.nombre)
+    let pics = document.createElement("img")
+    pics.classList.add("w-100","img-fluid")
+    pics.src = producto.foto
+   
+    let columna = document.createElement("div")
+    columna.classList.add("col")
+
+    let tarjeta = document.createElement("div")
+    tarjeta.classList.add("card")
+
+    tarjeta.appendChild(pics)
+    columna.appendChild(tarjeta)
+    contenedor.appendChild(columna)
+    
+
+
+
+
 })
 
